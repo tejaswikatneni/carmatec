@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarmatecAssignment</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="col-md-12">
+	<%= render partial: 'layouts/parts/header' %>
+</div>
+<p class="notice alert-success"><strong><%= notice %></strong></p>
+<p class="alert alert-danger"><strong><%= alert %></strong></p>
+<div class="container">
+	<%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<%= link_to 'Add Player(s)', new_player_path, class: 'pull-right btn btn-primary align-margin' %>
+<h1>Listing Users</h1>
+<table class="table">
+	<tr>
+		<th>User</th>
+		<th>Score</th>
+	</tr>
+	<% if @users.each do |user| %>
+		<tr>
+			<td><%= user.name %></td>
+			<td><%= user.score %></td>
+		</tr>
+	<% end.empty? %>
+		<tr><td colspan='2'>No users are available</td></tr>
+	<% end %>
+</table>

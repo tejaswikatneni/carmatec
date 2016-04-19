@@ -1,0 +1,9 @@
+<header>
+	<% if user_signed_in? %>
+		<%= link_to 'Home', '/', class: 'logout pull-left btn btn-primary' %>
+		<%= link_to destroy_user_session_path, method: :delete, class: 'pull-right btn btn-danger logout' do %>
+			<i class="fa fa-sign-out fa-lg"></i>
+			Logout
+		<% end %>
+	<% end %>
+</header>
